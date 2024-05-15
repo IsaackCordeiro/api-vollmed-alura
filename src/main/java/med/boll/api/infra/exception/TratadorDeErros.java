@@ -1,4 +1,4 @@
-package med.boll.api.infra;
+package med.boll.api.infra.exception;
 
 import jakarta.persistence.EntityNotFoundException;
 import med.boll.api.dto.errors.DadosErroValidacao;
