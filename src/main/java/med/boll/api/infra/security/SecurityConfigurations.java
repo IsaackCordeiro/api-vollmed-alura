@@ -25,6 +25,8 @@ public class SecurityConfigurations {
                 .authorizeHttpRequests(req -> {
                     // Permite requisições de login para todos os usuários
                     req.requestMatchers("/login").permitAll();
+                    // Libera as requisições do Spring Doc para todos os usuários
+                    req.requestMatchers("/v3/api-docs/**", "/swagger-ui.html", "swagger-ui/**").permitAll();
                     // Para qualquer outra requisição, o usuario deve estar autenticado
                     req.anyRequest().authenticated();
                 })
